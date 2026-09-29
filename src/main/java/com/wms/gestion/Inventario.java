@@ -23,4 +23,16 @@ for (Producto producto : productos) {
 System.out.println(producto);
 }
 }
+
+ public Producto buscarProducto(int id) {
+
+        for (Producto producto : productos) {
+
+            if (producto.getId() == id) {
+                return producto;
+            }
+        }
+
+        return null;
+    }
 }
