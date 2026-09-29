@@ -1,23 +1,29 @@
 name: CI
 
 on:
+  pull_request:
+
   push:
     branches:
       - main
       - develop
-  pull_request:
 
 jobs:
   build:
     runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v4
 
-      - name: Set up Java
+    steps:
+      - name: Descargar repositorio
+        uses: actions/checkout@v4
+
+      - name: Configurar Java
         uses: actions/setup-java@v4
         with:
-          java-version: '25'
-          distribution: 'temurin'
+          distribution: temurin
+          java-version: '17'
+          cache: maven
+          cache-dependency-path: Sistema/pom.xml
 
-      - name: Build Maven
+      - name: Compilar y ejecutar tests
+        working-directory: Sistema
         run: mvn clean install
