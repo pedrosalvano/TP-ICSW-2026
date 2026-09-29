@@ -34,9 +34,20 @@ return;
 stock += cantidad;
 }
 
-public void retirarStock(int cantidad) {
-stock -= cantidad;
-}
+    public void retirarStock(int cantidad) {
+        if (cantidad <= 0) {
+            System.out.println("La cantidad debe ser mayor a cero");
+            return;
+        }
+
+        if (cantidad > stock) {
+            System.out.println("No hay stock suficiente");
+            return;
+        }
+
+        stock -= cantidad;
+    }
+
 @Override
 public String toString() {
 return "Producto{" +
