@@ -40,6 +40,11 @@ System.out.println(producto);
      Producto producto = buscarProducto(id);
      if(producto != null){
          productos.remove(producto);
+         
+         System.out.println(
+         "Producto eliminado correctamente"
+         );
+         
          return true;
      }
      
