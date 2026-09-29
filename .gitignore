@@ -1,0 +1,32 @@
+# Maven
+target/
+
+# IntelliJ IDEA
+.idea/
+*.iml
+
+# Eclipse
+.classpath
+.project
+.settings/
+
+# VS Code
+.vscode/
+
+# Java
+*.class
+hs_err_pid*
+replay_pid*
+
+# Logs
+*.log
+
+# OS
+.DS_Store
+Thumbs.db
+
+# NetBeans
+nbproject/
+nbactions.xml
+nb-configuration.xml
+catalog.xml
