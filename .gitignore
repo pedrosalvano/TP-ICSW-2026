@@ -24,3 +24,9 @@ replay_pid*
 # OS
 .DS_Store
 Thumbs.db
+
+# NetBeans
+nbproject/
+nbactions.xml
+nb-configuration.xml
+catalog.xml
