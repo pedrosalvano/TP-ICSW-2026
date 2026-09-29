@@ -44,5 +44,7 @@ public class Sistema {
         System.out.println("Producto no encontrado");
         }
         
+        inventario.eliminarProducto(2);
+        inventario.mostrarInventario();
     }
 }

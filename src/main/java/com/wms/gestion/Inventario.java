@@ -35,4 +35,14 @@ System.out.println(producto);
 
         return null;
     }
+ 
+ public boolean eliminarProducto(int id){
+     Producto producto = buscarProducto(id);
+     if(producto != null){
+         productos.remove(producto);
+         return true;
+     }
+     
+     return false;
+ }
 }
