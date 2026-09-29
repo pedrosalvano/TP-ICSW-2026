@@ -27,8 +27,13 @@ public int getStock() {
 return stock;
 }
 public void agregarStock(int cantidad) {
+if (cantidad <= 0) {
+System.out.println("La cantidad debe ser mayor a cero");
+return;
+}
 stock += cantidad;
 }
+
 public void retirarStock(int cantidad) {
 stock -= cantidad;
 }
